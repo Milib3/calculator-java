@@ -1,0 +1,46 @@
+BLACK BOX TESTIRANJE KALKULATKORA 
+
+TEST 1:
+UNOS: 0*1000
+REZULTAT:0.0
+STATUS:PASSED
+
+TEST 2:
+UNOS: 3-
+REZULTAT:3.0
+STATUS:FAILED
+Komentar: Nedovršen izraz,kalkulator nije izbacio grešku već je dao rezultat.
+
+TEST 3:
+UNOS: 4,2*2,5
+REZULTAT:ERROR
+STATUS:FAILED
+Komentar: Korištenje zareza (","), umjesto tačke (".") u decimalnim brojevima izaziva grešku.
+
+TEST 4:
+UNOS: 1-3
+REZULTAT:-2.0
+STATUS:PASSED
+
+TEST 5:
+UNOS: 1/3
+REZULTAT:0.33333334
+STATUS:PASSED
+Komentar: Rezultat je približan (float preciznosti),prihbvatljivo.
+
+TEST 6:
+UNOS: 5+5
+REZULTAT:10.0
+STATUS:PASSED
+
+TEST 7:
+UNOS: 7/(3-3)
+REZULTAT:ERROR
+STATUS:PASSED
+Komentar: Program detektuje djeljenje sa nulom i pravilno javlja grešku.
+
+ZAPAŽANJE:
+*KALKULATOR USPJEŠNO OBAVLJA VEĆINU IZRAZA.
+*NEMA DOBRU OBRADU NEDOVRŠENIH IZRAZA,DAJE REZULTAT UMJESTO GREŠKE. (TEST BROJ 2)
+*NE PODRŽAVA DECIMALNE BROJEVE SA ZAREZOM, OČEKUJE KORIŠTENJE TAČKE.
+*DETKTUJE DIJELJENJE SA NULOM,ŠTO JE DOBRO.
