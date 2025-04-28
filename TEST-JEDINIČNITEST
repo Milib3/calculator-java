@@ -1,0 +1,15 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CalculatorTest {
+
+    @Test
+    public void testSimpleExpression() {
+        String expression = "4+5";
+        String expected = "9.0";
+        
+        String actual = Calculator.Run(expression);
+        
+        assertEquals(expected, actual, "Test failed for expression: " + expression);
+    }
+}
